@@ -22,13 +22,11 @@ public class songController {
 
     @GetMapping("/get/{id}")
     public Optional<Song> getSongById(@PathVariable String id) {
-
-
         return songRepository.findById(id);
     }
 
     @PostMapping("/post")
-    public List<Song> postSong(@RequestBody Song songForm){
+    public List<Song> postSong(@RequestBody Song songForm) {
         songRepository.insert(songForm);
         return songRepository.findAll();
     }
@@ -48,7 +46,7 @@ public class songController {
 
     @DeleteMapping("/delete")
     public List<Song> deleteSong(@RequestParam String id) {
-            songRepository.deleteById(id);
-            return songRepository.findAll();
+        songRepository.deleteById(id);
+        return songRepository.findAll();
     }
 }
