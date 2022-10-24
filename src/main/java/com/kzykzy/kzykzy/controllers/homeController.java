@@ -28,10 +28,9 @@ public class homeController {
 
     @GetMapping("/new")
     void create() {
-        User newUser = new User("tung", "tungchipsctn", "tungchipsctn@gmail.com");
-        userRepository.save(new User("hehe", " shshs", "sjda"));
+        User newUser = new User("tung", "tungchipsctn", "tungchipsctn@gmail.com", false);
+        userRepository.save(new User("hehe", " shshs", "sjda", false));
         userRepository.insert(newUser);
-        System.out.println("userRepository.findAll()");
     }
 
     @GetMapping("/get")

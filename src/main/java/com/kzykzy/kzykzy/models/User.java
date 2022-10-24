@@ -14,15 +14,11 @@ public class User {
     private String name;
     private String username;
     private String email;
+    private boolean role;
 
-
-
-    public User(String name, String username, String email) {
-        super();
-        this.name = name;
-        this.username = username;
-        this.email = email;
+    public User(String hehe, String s, String sjda, boolean b) {
     }
+
 
     public String getId() {
         return id;
@@ -56,13 +52,22 @@ public class User {
         this.email = email;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+    public boolean isRole() {
+        return role;
+    }
+
+    public void setRole(boolean role) {
+        this.role = role;
+    }
+
+    public User() {
+    }
+
+    public User(String id, String name, String username, String email, boolean role) {
+        this.id = id;
+        this.name = name;
+        this.username = username;
+        this.email = email;
+        this.role = role;
     }
 }
