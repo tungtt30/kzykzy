@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/song")
+@CrossOrigin(origins = "http://localhost:3000")
 public class songController {
     @Autowired
     songRepository songRepository;
