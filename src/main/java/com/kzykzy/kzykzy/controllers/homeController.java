@@ -13,6 +13,6 @@ import java.util.List;
 public class homeController {
     @GetMapping("")
     public String homepage() {
-        return "index";
+        return "index.html";
     }
 }
